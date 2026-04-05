@@ -8,4 +8,10 @@ describe("Server", () => {
     expect(response.status).toBe(200);
     expect(response.body).toEqual({ message: "Hello World!" });
   });
+
+  it("should return Hello World! on GET /test", async () => {
+    const response = await request(app).get("/test");
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({ message: "Hello World!" });
+  });
 });
