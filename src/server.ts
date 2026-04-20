@@ -8,6 +8,11 @@ app.get("/", (_req: Request, res: Response) => {
   return;
 });
 
+app.get("/test", (_req: Request, res: Response) => {
+  res.jso({ message: "Hello World!" });
+  return;
+});
+
 export { app };
 
 if (process.env.NODE_ENV !== "test") {
